@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayer Digest</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
+    header { text-align: center; }
+    h1 { color: #333; }
+    .section { margin: 30px 0; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    button { padding: 10px 15px; border: none; background: #333; color: white; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #555; }
+    a { color: #0077cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Prayer Digest</h1>
+    <p>Campus Fellowship Prayer Hub</p>
+  </header>
+
+  <!-- PDF Download Section -->
+  <div class="section">
+    <h2>📖 Latest Digest</h2>
+    <p>Click below to view or download this month’s prayer digest:</p>
+    <p><a href="PrayerDigest_Sept2025.pdf" target="_blank">Download September Prayer Digest (PDF)</a></p>
+  </div>
+
+  <!-- Prayer Requests & Praise -->
+  <div class="section">
+    <h2>🙏 Prayer Requests & Praise</h2>
+    <ul>
+      <li><b>Campus:</b> Pray for outreach this week.</li>
+      <li><b>Global:</b> Pray for peace in Sudan.</li>
+      <li><b>Praise:</b> Thankful for new students joining!</li>
+    </ul>
+  </div>
+
+  <!-- Prayer Buddy Generator -->
+  <div class="section">
+    <h2>🤝 Prayer Buddy Generator</h2>
+    <p>Click the button below to get a random buddy for prayer this cycle:</p>
+    <button onclick="generateBuddy()">Get Buddy</button>
+    <p id="buddyResult"></p>
+  </div>
+
+  <script>
+    function generateBuddy() {
+      // List of buddy names or numbers
+      const buddies = ["#1 Alice", "#2 David", "#3 Grace", "#4 Michael", "#5 Sarah"];
+      const randomBuddy = buddies[Math.floor(Math.random() * buddies.length)];
+      document.getElementById("buddyResult").innerText = "Your buddy is: " + randomBuddy;
+    }
+  </script>
+</body>
+</html>
